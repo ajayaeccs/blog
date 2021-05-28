@@ -33,9 +33,8 @@
 
 export default{
         name:'Home',
-        props:{
-            msg:String
-        },
+        props:
+            ['msg', 'message','users'],
         methods:{
             hello(data){alert("Hello!" + data)},
             toggleFunc(){
@@ -43,16 +42,7 @@ export default{
             }
         },
         data(){
-           return{show:true,
-                message:"Nandini",
-                  users:[
-                      {id:1,name:"Ajay Srivastava",email:"ajayaeccs@gmail.com",contact:9004558830},
-                      {id:2,name:"Sunil Srivastava",email:"ajayaeccs@gmail.com",contact:9450734039},
-                      {id:3,name:"Mala Srivastava",email:"xxxx@gmail.com",contact:123456789},
-                      {id:4,name:"Nandini Shrivastav",email:"nandinisri001@gmail.com",contact:8956132570}
-                  ]         
-           }
-
+           return{show:true}
         }
     }
 </script>
