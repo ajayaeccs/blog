@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <Home
+    <h1>{{title}}</h1>
+    <Home v-on:changeTitle="updateParentTitle($event)"
       msg="Ajay welcomes you to vue js"
       v-bind:message="message"
       v-bind:users="users"
+      
     />
-    -->
     <!-- <Hello /> -->
   </div>
 </template>
@@ -22,14 +23,20 @@ export default {
   },
     data(){
            return{
+                title: "Props Title",
                 message:"Nandini",
-                  users:[
+                users:[
                       {id:1,name:"Ajay Srivastava",email:"ajayaeccs@gmail.com",contact:9004558830},
                       {id:2,name:"Sunil Srivastava",email:"ajayaeccs@gmail.com",contact:9450734039},
                       {id:3,name:"Mala Srivastava",email:"xxxx@gmail.com",contact:123456789},
                       {id:4,name:"Nandini Shrivastav",email:"nandinisri001@gmail.com",contact:8956132570}
                   ]
             }
+      },
+      methods:{
+        updateParentTitle(title){
+          this.title = title
+        }
       }         
 }
 </script>
