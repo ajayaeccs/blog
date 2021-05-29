@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Users {{userId}}</h1>
+    <h1 v-size="'small'">Users {{userId}}</h1>
   </div>
 </template>
         

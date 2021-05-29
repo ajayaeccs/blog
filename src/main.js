@@ -28,6 +28,21 @@ Vue.filter("UCase",function(val){
   return val.toUpperCase()
 })
 
+Vue.directive("size",{
+  bind(el,binding){
+    if(binding.value == "small"){
+      el.style.fontSize = "20px"
+    }else if(binding.value == "medium"){
+      el.style.fontSize = "30px"
+    }else if(binding.value == "big"){
+      el.style.fontSize = "40px"
+    }else{
+      el.style.fontSize = "20px"
+    }
+
+  }
+})
+
 new Vue({
   router:router,
   render: h => h(App),
