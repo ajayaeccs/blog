@@ -1,20 +1,6 @@
 {
   "employees": [
     {
-      "id": 4,
-      "employee_name": "Cedric Kelly",
-      "employee_salary": 433060,
-      "employee_age": 22,
-      "profile_image": ""
-    },
-    {
-      "id": 5,
-      "employee_name": "Airi Satou",
-      "employee_salary": 162700,
-      "employee_age": 33,
-      "profile_image": ""
-    },
-    {
       "id": 6,
       "employee_name": "Brielle Williamson",
       "employee_salary": 372000,
