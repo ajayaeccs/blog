@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>{{greeting|UCase}}</h2>
     <h3 class="error" v-if="error.length">
       Please correct the following error(s)
       <ul>
@@ -82,6 +83,7 @@ export default {
   data() {
     return {
       error: [],
+      greeting: "Welcome to Registration Page",
       signup: {
         username: null,
         password: null,
@@ -92,7 +94,7 @@ export default {
   },
   methods: {
     signupUser(e) {
-      
+      this.error = []
       if (!this.signup.username) {
         this.error.push("Username is required");
       }
@@ -103,7 +105,9 @@ export default {
       e.preventDefault();
     },
   },
-};
+
+}
+
 </script>
 
 <style scoped>

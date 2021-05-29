@@ -9,20 +9,22 @@
       
     /> -->
     <!-- <Hello /> -->
-    <Signup />
+    <!-- <Signup /> -->
+    <EmployeeList />
   </div>
 </template>
 
 <script>
 // import Home from './components/Home.vue'
 // import Hello from './components/Hello.vue'
-import Signup from './components/Signup.vue'
+// import Signup from './components/Signup.vue'
+import EmployeeList from './components/EmployeeList'
 
 export default {
   name: 'App',
   components: {
-    //Home,Hello
-    Signup
+    //Home,Hello,Signup
+    EmployeeList
   },
     data(){
            return{
