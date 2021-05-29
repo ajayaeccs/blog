@@ -27,6 +27,7 @@
                 <td>{{user.contact}}</td>
             </tr>
         </table>
+        <button v-on:click='updateTitle()'>Change Title</button>
     </div>
 </template>
 <script>
@@ -39,6 +40,9 @@ export default{
             hello(data){alert("Hello!" + data)},
             toggleFunc(){
                 this.show=!this.show;
+            },
+            updateTitle(){
+                this.$emit('changeTitle',"Parent Title Emitted by child")
             }
         },
         data(){

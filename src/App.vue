@@ -1,25 +1,28 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <h1>{{title}}</h1>
+    <!-- <h1>{{title}}</h1>
     <Home v-on:changeTitle="updateParentTitle($event)"
       msg="Ajay welcomes you to vue js"
       v-bind:message="message"
       v-bind:users="users"
       
-    />
+    /> -->
     <!-- <Hello /> -->
+    <Signup />
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
+// import Home from './components/Home.vue'
 // import Hello from './components/Hello.vue'
+import Signup from './components/Signup.vue'
 
 export default {
   name: 'App',
   components: {
-    Home//,Hello
+    //Home,Hello
+    Signup
   },
     data(){
            return{
@@ -46,7 +49,6 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
 }
