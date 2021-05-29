@@ -1,15 +1,12 @@
 <template>
   <div>
-    <h1>Users {{userId}}</h1>
+    <h1>Sign In Component</h1>
   </div>
 </template>
         
 <script>
 export default {
-  name: "Users",
-  data(){
-    return{userId:this.$route.params.id}
-  }
+  name: "Signin",
 };
 </script>
 

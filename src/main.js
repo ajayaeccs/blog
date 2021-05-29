@@ -8,6 +8,8 @@ import VueRouter from 'vue-router'
 import Index from './components/Index'
 import Signup from './components/Signup'
 import EmployeeList from './components/EmployeeList'
+import Users from './components/Users'
+import PageNotFound from './components/PageNotFound'
 
 Vue.use(VueRouter)
 
@@ -15,6 +17,8 @@ const routes = [
   {path:'/',component:Index},
   {path:'/employee',component:EmployeeList},
   {path:'/signup',component:Signup},
+  {path:'/users/:id',component:Users},
+  {path:'*',component:PageNotFound}
 ]
 
 const router = new VueRouter({routes})

@@ -111,10 +111,6 @@ export default {
 </script>
 
 <style scoped>
-div {
-  background-color: antiquewhite;
-  height: 500px;
-}
 
 .error{
 color:red;

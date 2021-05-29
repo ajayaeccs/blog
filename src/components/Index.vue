@@ -1,24 +1,32 @@
 <template>
   <div>
-    <h1>Hello {{greeting}}</h1>
+    <component v-bind:is="cmp"> </component>
+    <br/><br/>
+    <b-button variant="success" v-on:click="updateCmp('signin')">SignIn</b-button>
+    &nbsp;&nbsp;
+    <b-button variant="success" v-on:click="updateCmp('signup')">SignUp</b-button>
   </div>
 </template>
         
 <script>
-
-
+import Signin from './Signin'
+import Signup from './Signup'
 export default {
   name: "Hello",
-  components: {
+  components: {"signin":Signin, "signup":Signup},
+  data() {
+    return {cmp:"signin" };
   },
-  data(){
-      return{greeting:"Ajay Srivastava"}
-  },
+  methods:{
+      updateCmp(cmp){
+          this.cmp = cmp; 
+      }
+  }
 };
 </script>
 
 <style scoped>
-div{
-    text-align: center;
+div {
+  text-align: center;
 }
 </style>
