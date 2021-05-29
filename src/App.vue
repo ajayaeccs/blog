@@ -10,8 +10,8 @@
     /> -->
     <!-- <Hello /> -->
     <!-- <Signup /> -->
-    <!-- <EmployeeList /> -->
-    <ActiveBoot />
+    <EmployeeList />
+    <!-- <ActiveBoot /> -->
   </div>
 </template>
 
@@ -19,14 +19,14 @@
 // import Home from './components/Home.vue'
 // import Hello from './components/Hello.vue'
 // import Signup from './components/Signup.vue'
-// import EmployeeList from './components/EmployeeList'
-import ActiveBoot from './components/ActiveBoot'
+import EmployeeList from './components/EmployeeList'
+// import ActiveBoot from './components/ActiveBoot'
 
 export default {
   name: 'App',
   components: {
-    //Home,Hello,Signup,EmployeeList,
-    ActiveBoot
+    //Home,Hello,Signup,ActiveBoot
+    EmployeeList
   },
     data(){
            return{

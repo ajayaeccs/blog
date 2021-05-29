@@ -1,18 +1,19 @@
 <template>
   <div>
     <table border="2px" class="employee">
-        <caption>Employees List</caption>
         <tr>
             <th>Employee ID</th>
             <th>Employee Name</th>
             <th>Employee Salary</th>
             <th>Employee Age</th>
+            <th>Action</th>
         </tr>
         <tr v-for="e in employeeList" v-bind:key="e.id">
             <td>{{e.id}}</td>
             <td>{{e.employee_name}}</td>
             <td>{{e.employee_salary}}</td>
             <td>{{e.employee_age}}</td>
+            <td><b-button variant="success" v-on:click="deleteEmployee(e.id)" >Delete Record</b-button></td>
         </tr>
     </table>
   </div>
@@ -31,18 +32,23 @@ export default {
   data(){
       return{employeeList:[]}
   },
-  mounted(){
-      Vue.axios.get('http://dummy.restapiexample.com/api/v1/employees')
-      .then(resp => {this.employeeList=resp.data.data})
+  methods:{
+      getEmployees(){
+          this.axios.get('http://localhost:3000/employees')
+                    .then(resp => {this.employeeList=resp.data})
+      },
+      deleteEmployee(id){
+         this.axios.delete('http://localhost:3000/employees/'+id)
+                    .then(() => {this.getEmployees()})
+      }
   },
-};
+  mounted(){
+    this.getEmployees()  
+  },
+}
 </script>
 
 <style scoped>
-div{
-    background-color:antiquewhite;
-    height: 800px;
-}
 
 .employee{
     border:2px solid blue;
